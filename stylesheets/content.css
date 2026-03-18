@@ -4,6 +4,7 @@ overflow-x: hidden;
 background: #080808;
 position:absolute;
 background-image: url("../img/fon.png");
+background-size: 100%;
 overflow-x: hidden
 }
 
@@ -1100,7 +1101,7 @@ overflow-x: hidden
   font-weight: 500;
   white-space: nowrap;
   -webkit-text-stroke: 0.035vw white;
-  filter: blur(0.23vw);
+  filter: blur(0.1vw);
 }
 
 .podzagolovok21 {
@@ -1116,7 +1117,7 @@ overflow-x: hidden
   font-weight: 400;
   white-space: nowrap;
   -webkit-text-stroke: 0.035vw white;
-  filter: blur(0.1vw);
+  filter: blur(0.05vw);
 }
 
 .text21 {
@@ -1335,12 +1336,6 @@ overflow-x: hidden
   height: auto;
   display: block;
 }
-/* 
-[class^="kvadratik"] {
-  z-index: 10;
-  position: relative; 
-} */
-
 
 .modal-content {
   width: 49.17vw;
@@ -1564,6 +1559,42 @@ overflow-x: hidden
   position: absolute;
   object-fit: contain;
   z-index: 1;
+}
+
+/* НАСТРОЙКИ ТЕКСТА 3 */
+
+.zagolovok31 {
+  width: 31.67vw;
+  height: 8.33vw;
+  top: 2.99vw;
+  left: 46.53vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 4.44vw;
+  font-weight: 500;
+  white-space: normal;
+  line-height: 1.2;
+  -webkit-text-stroke: 0.035vw white;
+  filter: blur(0.1vw);
+  line-height: 4.17vw;
+}
+
+.podzagolovok31 {
+  width: 21.32vw;
+  height: 3.33vw;
+  top: 14vw;
+  left: 47.08vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.035vw white;
+  filter: blur(0.05vw);
 }
 
 
