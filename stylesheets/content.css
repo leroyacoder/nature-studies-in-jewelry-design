@@ -1,11 +1,18 @@
-body{
-width: 100vw;
-overflow-x: hidden;
-background: #080808;
-position:absolute;
-background-image: url("../img/fon.png");
-background-size: 100%;
-overflow-x: hidden
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: #080808;
+  position: absolute;
+  background-image: url("../img/fon.png");
+  background-size: 100%;
+  padding-bottom: 50vw;
+}
+
+/* Guaranteed extra space after last absolute blocks */
+body::after {
+  content: "";
+  display: block;
+  height: 50vw;
 }
 
 /* НАСТРОЙКИ БЛОКА 1 */
@@ -231,8 +238,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 21.48vw;
-  height: 24.10vw;
+  width: 21.83vw;
+  height: 22.10vw;
   top: 14.31vw;
   left: 57.5vw;
 }
@@ -242,8 +249,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 22.07vw;
-  height: 24.10vw;
+  width: 21.83vw;
+  height: 22.10vw;
   top: 14.31vw;
   left: 57.5vw;
 }
@@ -253,8 +260,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 22.65vw;
-  height: 24.10vw;
+  width: 21.83vw;
+  height: 22.10vw;
   top: 14.31vw;
   left: 57.5vw;
 }
@@ -264,8 +271,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 23.24vw;
-  height: 24.10vw;
+  width: 21.83vw;
+  height: 22.10vw;
   top: 14.31vw;
   left: 57.5vw;
 }
@@ -275,8 +282,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 23.83vw;
-  height: 24.10vw;
+  width: 21.83vw;
+  height: 22.10vw;
   top: 14.31vw;
   left: 57.5vw;
 }
@@ -286,10 +293,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 21.56vw;
-  height: 38.33vw;
-  top: 18.40vw;
-  left: 53.82vw;
+  width: 31vw;
+  height: 45vw;
+  top: 17vw;
+  left: 52.7vw;
 }
 
 .krist\.raspilenie2 {
@@ -297,10 +304,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 21.56vw;
-  height: 38.33vw;
-  top: 18.40vw;
-  left: 53.82vw;
+  width: 31vw;
+  height: 45vw;
+  top: 17vw;
+  left: 52.7vw;
 }
 
 .krist\.raspilenie3 {
@@ -308,10 +315,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 21.56vw;
-  height: 38.33vw;
-  top: 18.40vw;
-  left: 53.82vw;
+  width: 31vw;
+  height: 45vw;
+  top: 17vw;
+  left: 52.7vw;
 }
 
 .krist\.raspilenie4 {
@@ -319,10 +326,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 21.56vw;
-  height: 38.33vw;
-  top: 18.40vw;
-  left: 53.82vw;
+  width: 31vw;
+  height: 45vw;
+  top: 17vw;
+  left: 52.7vw;
 }
 
 .krist\.raspilenie5 {
@@ -330,10 +337,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 21.78vw;
-  height: 38.33vw;
-  top: 18.40vw;
-  left: 53.82vw;
+  width: 31vw;
+  height: 45vw;
+  top: 17vw;
+  left: 52.7vw;
 }
 
 .bolsh\.raspilenie1 {
@@ -341,8 +348,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 21.26vw;
-  height: 34.58vw;
+  width: 28.61vw;
+  height: 34.72vw;
   top: 21.18vw;
   left: 37.71vw;
 }
@@ -352,8 +359,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 20.67vw;
-  height: 34.58vw;
+  width: 28.61vw;
+  height: 34.72vw;
   top: 21.18vw;
   left: 37.71vw;
 }
@@ -363,8 +370,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 20.38vw;
-  height: 34.58vw;
+  width: 28.61vw;
+  height: 34.72vw;
   top: 21.18vw;
   left: 37.71vw;
 }
@@ -374,8 +381,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 20.38vw;
-  height: 34.58vw;
+  width: 28.61vw;
+  height: 34.72vw;
   top: 21.18vw;
   left: 37.71vw;
 }
@@ -385,8 +392,8 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 20.38vw;
-  height: 34.58vw;
+  width: 28.61vw;
+  height: 34.72vw;
   top: 21.18vw;
   left: 37.71vw;
 }
@@ -396,10 +403,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 16.67vw;
-  height: 35.87vw;
-  top: 20.0vw;
-  left: 33.06vw;
+  width: 26.32vw;
+  height: 42.36vw;
+  top: 20vw;
+  left: 31.5vw;
 }
 
 .sb\.raspilenie2 {
@@ -407,10 +414,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 16.68vw;
-  height: 35.87vw;
-  top: 20.0vw;
-  left: 33.06vw;
+  width: 26.32vw;
+  height: 42.36vw;
+  top: 20vw;
+  left: 31.5vw;
 }
 
 .sb\.raspilenie3 {
@@ -418,10 +425,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 17.22vw;
-  height: 35.87vw;
-  top: 20.0vw;
-  left: 33.06vw;
+  width: 26.32vw;
+  height: 42.36vw;
+  top: 20vw;
+  left: 31.5vw;
 }
 
 .sb\.raspilenie4 {
@@ -429,10 +436,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 17.77vw;
-  height: 35.87vw;
-  top: 20.0vw;
-  left: 33.06vw;
+  width: 26.32vw;
+  height: 42.36vw;
+  top: 20vw;
+  left: 31.5vw;
 }
 
 .sb\.raspilenie5 {
@@ -440,10 +447,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 18.31vw;
-  height: 35.87vw;
-  top: 20.0vw;
-  left: 33.06vw;
+  width: 26.32vw;
+  height: 42.36vw;
+  top: 20vw;
+  left: 31.5vw;
 }
 
 .kora\.raspilenie1 {
@@ -451,10 +458,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 27.34vw;
-  height: 29.15vw;
-  top: 13.33vw;
-  left: 23.19vw;
+  width: 28vw;
+  height: 30vw;
+  top: 13.3vw;
+  left: 23.5vw;
 }
 
 .kora\.raspilenie2 {
@@ -462,10 +469,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 27.34vw;
-  height: 29.15vw;
-  top: 13.33vw;
-  left: 23.19vw;
+  width: 28vw;
+  height: 30vw;
+  top: 13.3vw;
+  left: 23.5vw;
 }
 
 .kora\.raspilenie3 {
@@ -473,10 +480,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 27.34vw;
-  height: 29.15vw;
-  top: 13.33vw;
-  left: 23.19vw;
+  width: 28vw;
+  height: 30vw;
+  top: 13.3vw;
+  left: 23.5vw;
 }
 
 .kora\.raspilenie4 {
@@ -484,10 +491,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 27.34vw;
-  height: 29.15vw;
-  top: 13.33vw;
-  left: 23.19vw;
+  width: 28vw;
+  height: 30vw;
+  top: 13.3vw;
+  left: 23.5vw;
 }
 
 .kora\.raspilenie5 {
@@ -495,10 +502,10 @@ overflow-x: hidden
   opacity: 0;
   pointer-events: none;
   object-fit: contain;
-  width: 27.34vw;
-  height: 29.15vw;
-  top: 13.33vw;
-  left: 23.19vw;
+  width: 28vw;
+  height: 30vw;
+  top: 13.3vw;
+  left: 23.5vw;
 }
 
 .kb\.kostil1 {
@@ -1108,7 +1115,7 @@ overflow-x: hidden
   width: 35vw;
   height: 2vw;
   top: 19vw;
-  left: 55vw;
+  left: 50vw;
   position: absolute;
   color: #ffffff;
   margin: 0;
@@ -1356,6 +1363,7 @@ overflow-x: hidden
   top: 139.58vw;
   left: 0;
   width: 100%;
+  height: 74.6528vw; 
 }
 
 /* НАСТРОЙКИ ЭЛЕМЕНТОВ 3 */
@@ -1597,4 +1605,885 @@ overflow-x: hidden
   filter: blur(0.05vw);
 }
 
+/* НАСТРОЙКИ БЛОКА 4 */
 
+.block4 {
+  position: absolute;
+  top: 210.56vw;
+  left: 0;
+  width: 100%;
+  height: 45vw;
+}
+
+/* НАСТРОЙКИ ЭЛЕМЕНТОВ 4 */
+
+.kvadratik21 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 0;
+  left: 50.63vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik22 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 0;
+  left: 59.65vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik23 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 0;
+  left: 68.68vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik24 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 0;
+  left: 77.71vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik25 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 9.03vw;
+  left: 50.63vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik26 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 9.03vw;
+  left: 59.65vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik27 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 9.03vw;
+  left: 68.68vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik28 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 9.03vw;
+  left: 77.71vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik29 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 18.06vw;
+  left: 50.63vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik210 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 18.06vw;
+  left: 59.65vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik211 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 18.06vw;
+  left: 68.68vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.kvadratik212 {
+  width: 9.03vw;
+  height: 9.03vw;
+  top: 18.06vw;
+  left: 77.71vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* НАСТРОЙКИ ТЕКСТА 4 */
+
+.zagolovok41 {
+  width: 43vw;
+  height: 4vw;
+  top: 1vw;
+  left: 3vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0; 
+  font-family: "Inter Medium";
+  font-size: 4vw;
+  font-weight: 500;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.035vw white;
+  filter: blur(0.1vw);
+}
+
+.podzagolovok41 {
+  width: 35vw;
+  height: 2vw;
+  top: 6.5vw;
+  left: 3vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.035vw white;
+  filter: blur(0.05vw);
+}
+
+
+.text41 {
+  width: 22vw;
+  height: 5.6vw;
+  top: 11.73vw;
+  left: 4.1vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.text42 {
+  width: 19vw;
+  height: 1.3vw;
+  top: 19vw;
+  left: 13.2vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.text43 {
+  width: 14.3vw;
+  height: 1.7vw;
+  top: 32.6vw;
+  left: 66.5vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.text44 {
+  width: 9vw;
+  height: 3.4vw;
+  top: 35.4vw;
+  left: 82.15vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+/* АНИМАЦИЯ ТЕКСТА 4 */
+
+.text41 span,
+.text42 span,
+.text43 span,
+.text44 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  animation: tick var(--cycle, 1.5s) infinite;
+  pointer-events: none;
+}
+
+.text41 span:nth-child(1),
+.text42 span:nth-child(1),
+.text43 span:nth-child(1),
+.text44 span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.text41 span:nth-child(2),
+.text42 span:nth-child(2),
+.text43 span:nth-child(2),
+.text44 span:nth-child(2) {
+  animation-delay: calc(var(--cycle, 1.5s) * 1/3);
+}
+
+.text41 span:nth-child(3),
+.text42 span:nth-child(3),
+.text43 span:nth-child(3),
+.text44 span:nth-child(3) {
+  animation-delay: calc(var(--cycle, 1.5s) * 2/3);
+}
+
+.text41:hover,
+.text42:hover,
+.text43:hover,
+.text44:hover {
+  --cycle: 0.5s;
+} 
+
+/* НАСТРОЙКИ БЛОКА 5 */
+
+.block5 {
+  position: absolute;
+  top: 255.56vw;
+  left: 0;
+  width: 100%;
+}
+
+.blokzametok {
+  width: 46.11vw;
+  height: 58.26vw;
+  top: 21.94vw;
+  left: 28.19vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tytor11 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 0s;
+}
+
+.tytor12 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 0.5s;
+}
+
+.tytor13 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 1s;
+}
+
+.tytor14 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 1.5s;
+}
+
+.tytor15 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 2s;
+}
+
+.tytor16 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 2.5s;
+}
+
+.tytor17 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 3s;
+}
+
+.tytor18 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 14vw;
+  left: 3vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 3.5s;
+}
+
+.tytor21 {
+width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 0s;
+}
+
+.tytor22 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 0.5s;
+}
+
+.tytor23 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 1s;
+}
+
+.tytor24 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 1.5s;
+}
+
+.tytor25 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 2s;
+}
+
+.tytor26 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 2.5s;
+}
+
+.tytor27 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 3s;
+}
+
+.tytor28 {
+  width: 22.8vw;
+  height: 29vw;
+  top: 51vw;
+  left: 78vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  animation: tickGroup 4s infinite;
+  animation-delay: 3.5s;
+}
+
+@keyframes tickGroup {
+  0%, 12.49% { opacity: 1; }
+  12.5%, 100% { opacity: 0; }
+}
+
+/* ТЕКСТ 5 */
+
+.zagolovok51 {
+  width: 42.6vw;
+  height: 8.3vw;
+  top: 5vw;
+  left: 30vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 4vw;
+  font-weight: 500;
+  white-space: normal;
+  -webkit-text-stroke: 0.035vw white;
+  filter: blur(0.1vw);
+  text-align: center;
+}
+
+.podzagolovok51 {
+  width: 34.8vw;
+  height: 1.5vw;
+  top: 15vw;
+  left: 34.5vw;
+  position: absolute;
+  color: #ffffff; 
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  white-space: normal;
+  -webkit-text-stroke: 0.035vw white;
+  filter: blur(0.05vw);
+  text-align: center;
+}
+
+.text51 {
+  width: 17.29vw;
+  height: 2.64vw;
+  top: 45.62vw;
+  left: 3.68vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.text52 {
+  width: 12.85vw;
+  height: 2.64vw;
+  top: 53.82vw;
+  left: 19.24vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.text53 {
+  width: 14.44vw;
+  height: 2.64vw;
+  top: 26.52vw;
+  left: 72.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.text54 {
+  width: 11.18vw;
+  height: 2.64vw;
+  top: 30.27vw;
+  left: 82.15vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* АНИМАЦИЯ ТЕКСТА 5 */
+
+.text51 span,
+.text52 span,
+.text53 span,
+.text54 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  animation: tick var(--cycle, 1.5s) infinite;
+  pointer-events: none;
+}
+
+.text51 span:nth-child(1),
+.text52 span:nth-child(1),
+.text53 span:nth-child(1),
+.text54 span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.text51 span:nth-child(2),
+.text52 span:nth-child(2),
+.text53 span:nth-child(2),
+.text54 span:nth-child(2) {
+  animation-delay: calc(var(--cycle, 1.5s) * 1/3);
+}
+
+.text51 span:nth-child(3),
+.text52 span:nth-child(3),
+.text53 span:nth-child(3),
+.text54 span:nth-child(3) {
+  animation-delay: calc(var(--cycle, 1.5s) * 2/3);
+}
+
+.text51:hover,
+.text52:hover,
+.text53:hover,
+.text54:hover {
+  --cycle: 0.5s;
+}
+
+/* ИГРА 5 */
+
+.kostilris {
+  width: 31.39vw;
+  height: 44.58vw;
+  top: 31vw;
+  left: 35.42vw;
+  position: absolute;
+  object-fit: contain;
+  pointer-events: auto;
+  cursor: crosshair;
+  opacity: 0;
+}
+
+.dot {
+  position: absolute;
+  width: 0.25vw;
+  height: 0.25vw;
+  background: #000000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* НАСТРОЙКИ ПОДВАЛА */
+
+.podval {
+  position: absolute;
+  top: 349.72vw;
+  left: 0;
+  width: 100%;
+}
+
+.kolzopodval {
+  width: 33.13vw;
+  height: 38.96vw;
+  top: 0;
+  left: 32.5vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* .begstrok {
+  width: 232.7vw;
+  height: 13.75vw;
+  top: 18.75vw;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+  animation: scroll 20s linear infinite;
+  z-index: 2;
+} */
+
+/* @keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+} */
+
+.textp1 {
+  width: 10.21vw;
+  height: 1.6vw;
+  top: 1.95vw;
+  left: 23.33vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.textp2 {
+  width: 6.53vw;
+  height: 1.6vw;
+  top: -4.86vw;
+  left: 46.74vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.textp3 {
+  width: 7.92vw;
+  height: 1.6vw;
+  top: 1.32vw;
+  left: 66.39vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.podzagolovokp1 {
+  width: 22.08vw;
+  height: 1.53vw;
+  top: 47.22vw;
+  left: 35.76vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  z-index: 3;
+}
+
+.podzagolovokp2 {
+  width: 22.08vw;
+  height: 1.53vw;
+  top: 51.81vw;
+  left: 35.76vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  z-index: 3;
+}
+
+.textp4 {
+  width: 9.44vw;
+  height: 2.64vw;
+  top: 47.43vw;
+  left: 51.74vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.textp5 {
+  width: 8.33vw;
+  height: 2.64vw;
+  top: 52.02vw;
+  left: 51.74vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.textp6 {
+  width: 8.33vw;
+  height: 2.64vw;
+  top: 35.28vw;
+  left: 66.39vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 3;
+}
+
+/* АНИМАЦИЯ ТЕКСТА ПОДВАЛА */
+
+.textp1 span,
+.textp2 span,
+.textp3 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  animation: tick var(--cycle, 1.5s) infinite;
+  pointer-events: none;
+}
+
+.textp1 span:nth-child(1),
+.textp2 span:nth-child(1),
+.textp3 span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.textp1 span:nth-child(2),
+.textp2 span:nth-child(2),
+.textp3 span:nth-child(2) {
+  animation-delay: calc(var(--cycle, 1.5s) * 1/3);
+}
+
+.textp1 span:nth-child(3),
+.textp2 span:nth-child(3),
+.textp3 span:nth-child(3) {
+  animation-delay: calc(var(--cycle, 1.5s) * 2/3);
+}
+
+.textp1:hover,
+.textp2:hover,
+.textp3:hover {
+  --cycle: 0.5s;
+}
+
+/* Бегущая строка */
+.marquee {
+  position: absolute;
+  top: 18.75vw;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.marquee .begstrok {
+  display: inline-block;
+  width: 232.7vw;
+  height: 13.75vw;
+  object-fit: cover;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee:hover {
+  transform: scale(1.5);
+}
+
+/* Speed change handled in JS to avoid animation restart/jump */
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+} 
+
+
+.podval {
+  margin-bottom: 10vw;
+}
