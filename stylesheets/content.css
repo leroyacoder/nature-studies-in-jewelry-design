@@ -8,13 +8,6 @@ body {
   padding-bottom: 50vw;
 }
 
-/* Guaranteed extra space after last absolute blocks */
-body::after {
-  content: "";
-  display: block;
-  height: 50vw;
-}
-
 /* НАСТРОЙКИ БЛОКА 1 */
 
 .block1 {
@@ -2245,9 +2238,9 @@ width: 22.8vw;
 
 .dot {
   position: absolute;
-  width: 0.25vw;
-  height: 0.25vw;
-  background: #000000;
+  width: 0.5vw;
+  height: 0.5vw;
+  background: #ffffff;
   border-radius: 50%;
   pointer-events: none;
   z-index: 10000;
@@ -2271,22 +2264,6 @@ width: 22.8vw;
   object-fit: contain;
   z-index: 1;
 }
-
-/* .begstrok {
-  width: 232.7vw;
-  height: 13.75vw;
-  top: 18.75vw;
-  left: 0;
-  position: absolute;
-  object-fit: cover;
-  animation: scroll 20s linear infinite;
-  z-index: 2;
-} */
-
-/* @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-} */
 
 .textp1 {
   width: 10.21vw;
@@ -2398,10 +2375,10 @@ width: 22.8vw;
 }
 
 .textp6 {
-  width: 8.33vw;
-  height: 2.64vw;
-  top: 35.28vw;
-  left: 66.39vw;
+  width: 26.8vw;
+  height: 3vw;
+  top: 36.5vw;
+  left: 66vw;
   position: absolute;
   color: #ffffff;
   margin: 0;
@@ -2452,6 +2429,7 @@ width: 22.8vw;
 }
 
 /* Бегущая строка */
+
 .marquee {
   position: absolute;
   top: 18.75vw;
@@ -2476,13 +2454,10 @@ width: 22.8vw;
   transform: scale(1.5);
 }
 
-/* Speed change handled in JS to avoid animation restart/jump */
-
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 } 
-
 
 .podval {
   margin-bottom: 10vw;

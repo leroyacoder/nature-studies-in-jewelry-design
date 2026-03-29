@@ -23,35 +23,39 @@ window.addEventListener('load', function() {
     window.addEventListener('resize', recalcBodyHeight);
   })();
 
-  //ЗВУК ДЛЯ ТЕКСТА 
-  (function() {
-    const sound = new Audio('./mp3/zvyk1.mp3');
-    sound.preload = 'auto';
+//ЗВУК ДЛЯ ТЕКСТА 
 
-    let canPlay = false;
-    document.addEventListener('click', function enableSound() {
-      canPlay = true;
-      document.removeEventListener('click', enableSound);
-    }, { once: true });
+(function() {
+  const sound = new Audio('./mp3/zvyk1.mp3');
+  sound.preload = 'auto';
 
-    const textBlocks = document.querySelectorAll('.text11, .text12, .text13');
-    if (textBlocks.length > 0) {
-      textBlocks.forEach(block => {
-        block.addEventListener('mouseenter', () => {
-          if (!canPlay) return;
-          sound.currentTime = 0;
-          sound.play().catch(e => console.log('Sound play failed:', e));
-        });
-        block.addEventListener('mouseleave', () => {
-          sound.pause();
-          sound.currentTime = 0;
-        });
+  let canPlay = false;
+  document.addEventListener('click', function enableSound() {
+    canPlay = true;
+    document.removeEventListener('click', enableSound);
+  }, { once: true });
+
+  const textBlocks = document.querySelectorAll(
+    '.text11, .text12, .text13, .text21, .text22, .text23, .text24, .text41, .text42, .text43, .text44, .text51, .text52, .text53, .text54, .textp1, .textp2, .textp3'
+  );
+
+  if (textBlocks.length > 0) {
+    textBlocks.forEach(block => {
+      block.addEventListener('mouseenter', () => {
+        if (!canPlay) return;
+        sound.currentTime = 0;
+        sound.play().catch(e => console.log('Sound play failed:', e));
       });
-      console.log('Звук настроен для', textBlocks.length, 'блоков.');
-    } else {
-      console.log('Текстовые блоки для звука не найдены.');
-    }
-  })();
+      block.addEventListener('mouseleave', () => {
+        sound.pause();
+        sound.currentTime = 0;
+      });
+    });
+    console.log('Звук настроен для', textBlocks.length, 'блоков.');
+  } else {
+    console.log('Текстовые блоки для звука не найдены.');
+  }
+})();
 
   //ПАЗЛ 1
 
