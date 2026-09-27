@@ -6,6 +6,11 @@
 
 @media (max-width: 768px) {
 
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   .modal-content {
     width: 85vw;
   }
@@ -215,24 +220,26 @@
   /* ============ БЛОК 2 ============ */
 
   .block2 {
-    top: 188vw;
-    height: 158vw;
+    top: 203vw;
+    height: 221vw;
   }
 
   .zagolovok21 {
-    top: 6vw;
-    left: 5vw;
-    width: 90vw;
-    font-size: 7vw;
+    top: 0vw;
+    left: 6.52vw;
+    width: 87.2vw;
+    font-size: 7.73vw;
+    filter: blur(0.18vw);
   }
 
   .podzagolovok21 {
-    top: 15vw;
-    left: 5vw;
-    width: 55vw;
-    font-size: 3vw;
+    top: 11.59vw;
+    left: 6.52vw;
+    width: 64.73vw;
+    font-size: 3.38vw;
     white-space: normal;
     line-height: 1.35;
+    filter: blur(0.15vw);
   }
 
   /* на мобильной версии текст-подсказки справа от заголовка убраны по макету */
@@ -241,65 +248,91 @@
     display: none;
   }
 
-  /* пазл — 3 колонки x 4 ряда */
+  /* пазл — 3 колонки x 4 ряда, вплотную, без промежутков (по фигме) */
 
-  .kvadratik11 { top: 24vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik12 { top: 24vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik13 { top: 24vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik14 { top: 47.33vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik15 { top: 47.33vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik16 { top: 47.33vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik17 { top: 70.66vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik18 { top: 70.66vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik19 { top: 70.66vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik110 { top: 94vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik111 { top: 94vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
-  .kvadratik112 { top: 94vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik11 { top: 27.78vw; left: 3.62vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik12 { top: 27.78vw; left: 29.89vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik13 { top: 27.78vw; left: 56.16vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik14 { top: 54.05vw; left: 3.62vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik15 { top: 54.05vw; left: 29.89vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik16 { top: 54.05vw; left: 56.16vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik17 { top: 80.31vw; left: 3.62vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik18 { top: 80.31vw; left: 29.89vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik19 { top: 80.31vw; left: 56.16vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik110 { top: 106.58vw; left: 3.62vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik111 { top: 106.58vw; left: 29.89vw; width: 26.27vw; height: 26.27vw; }
+  .kvadratik112 { top: 106.58vw; left: 56.16vw; width: 26.27vw; height: 26.27vw; }
 
   .text23 {
-    top: 120vw;
-    left: 4vw;
-    width: 44vw;
-    font-size: 2.8vw;
+    top: 142.75vw;
+    left: 6.52vw;
+    width: 89.86vw;
+    font-size: 3.38vw;
     line-height: 1.3;
   }
 
   .text24 {
-    top: 120vw;
-    left: 50vw;
-    width: 44vw;
-    font-size: 2.8vw;
+    top: 156.52vw;
+    left: 32.85vw;
+    width: 69.81vw;
+    font-size: 3.38vw;
     line-height: 1.3;
   }
 
-  .obvodka\.perlamytr\.F,
+  .obvodka\.perlamytr\.F {
+    top: 185.3vw;
+    left: 6.52vw;
+    width: 28.78vw;
+    height: 29.66vw;
+  }
+
+  /* заливка крупнее и смещена относительно контура — так же, как на десктопе */
   .perlamytr\.F {
-    top: 136vw;
-    left: 8vw;
-    width: 20vw;
-    height: 20vw;
+    top: 183.32vw;
+    left: -0.94vw;
+    width: 37.53vw;
+    height: 32.24vw;
   }
 
-  .obvodka\.zvezdi\.F,
+  .obvodka\.zvezdi\.F {
+    top: 168.84vw;
+    left: 47.07vw;
+    width: 26.62vw;
+    height: 27.42vw;
+  }
+
   .zvezdi\.F {
-    top: 136vw;
-    left: 34vw;
-    width: 18vw;
-    height: 18vw;
+    top: 164.05vw;
+    left: 43.18vw;
+    width: 34.54vw;
+    height: 34.54vw;
   }
 
-  .obvodka\.bysina\.F,
+  .obvodka\.bysina\.F {
+    top: 210.58vw;
+    left: 55.66vw;
+    width: 11.27vw;
+    height: 10.39vw;
+  }
+
   .bysina\.F {
-    top: 147vw;
-    left: 58vw;
-    width: 9vw;
-    height: 9vw;
+    top: 209.43vw;
+    left: 54.92vw;
+    width: 13.8vw;
+    height: 13.82vw;
+  }
+
+  /* плавное появление/исчезновение заливки по тапу на контур */
+  .perlamytr\.F,
+  .zvezdi\.F,
+  .bysina\.F {
+    transition: opacity 0.3s ease;
   }
 
   /* ============ БЛОК 3 ============ */
 
   .block3 {
-    top: 346vw;
+    top: 424vw;
     height: 140vw;
   }
 
@@ -390,7 +423,7 @@
   /* ============ БЛОК 4 ============ */
 
   .block4 {
-    top: 486vw;
+    top: 564vw;
     height: 140vw;
   }
 
@@ -442,7 +475,7 @@
   /* ============ БЛОК 5 ============ */
 
   .block5 {
-    top: 626vw;
+    top: 704vw;
   }
 
   .zagolovok51 {
@@ -495,7 +528,7 @@
   /* ============ ПОДВАЛ ============ */
 
   .podval {
-    top: 746vw;
+    top: 824vw;
     margin-bottom: 20vw;
   }
 
