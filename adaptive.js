@@ -159,7 +159,7 @@
     activeElement = null;
 
     if (correctCount === 3 && !popupShown) {
-      popup.style.display = 'flex';
+      openModal(popup);
       popupShown = true;
     }
   }
@@ -188,7 +188,7 @@
 
   popup.addEventListener('click', function(e) {
     if (e.target === popup) {
-      popup.style.display = 'none';
+      closeModal(popup);
     }
   });
 

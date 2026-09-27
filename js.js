@@ -1,3 +1,65 @@
+// ОБЩАЯ ПЛАВНАЯ АНИМАЦИЯ ПОП АПОВ
+
+function openModal(modal) {
+  if (!modal) return;
+  modal.style.display = 'flex';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      modal.classList.add('is-visible');
+    });
+  });
+}
+
+function closeModal(modal) {
+  if (!modal) return;
+  modal.classList.remove('is-visible');
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 900);
+}
+
+window.soundEnabled = false;
+
+// ПОП АП ЗВУК
+
+document.addEventListener('DOMContentLoaded', function() {
+  const popup = document.getElementById('soundPopup');
+  if (!popup) return;
+
+  const onBtn = popup.querySelector('.sound-btn-on');
+  const offBtn = popup.querySelector('.sound-btn-off');
+  const onBead = onBtn.querySelector('.sound-bysina');
+  const offBead = offBtn.querySelector('.sound-bysina');
+
+  function bindHover(btn, bead) {
+    btn.addEventListener('mouseenter', () => {
+      if (bead.classList.contains('selected')) return;
+      bead.classList.add('hover-visible');
+    });
+    btn.addEventListener('mouseleave', () => {
+      bead.classList.remove('hover-visible');
+    });
+  }
+
+  function choose(enabled, bead) {
+    window.soundEnabled = enabled;
+    bead.classList.remove('hover-visible');
+    bead.classList.add('selected');
+
+    setTimeout(() => {
+      closeModal(popup);
+    }, 400);
+  }
+
+  bindHover(onBtn, onBead);
+  bindHover(offBtn, offBead);
+
+  onBtn.addEventListener('click', () => choose(true, onBead));
+  offBtn.addEventListener('click', () => choose(false, offBead));
+
+  openModal(popup);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
@@ -29,12 +91,6 @@ window.addEventListener('load', function() {
   const sound = new Audio('./mp3/zvyk1.mp3');
   sound.preload = 'auto';
 
-  let canPlay = false;
-  document.addEventListener('click', function enableSound() {
-    canPlay = true;
-    document.removeEventListener('click', enableSound);
-  }, { once: true });
-
   const textBlocks = document.querySelectorAll(
     '.text11, .text12, .text13, .text21, .text22, .text23, .text24, .text41, .text42, .text43, .text44, .text51, .text52, .text53, .text54, .textp1, .textp2, .textp3'
   );
@@ -42,7 +98,7 @@ window.addEventListener('load', function() {
   if (textBlocks.length > 0) {
     textBlocks.forEach(block => {
       block.addEventListener('mouseenter', () => {
-        if (!canPlay) return;
+        if (!window.soundEnabled) return;
         sound.currentTime = 0;
         sound.play().catch(e => console.log('Sound play failed:', e));
       });
@@ -90,17 +146,17 @@ window.addEventListener('load', function() {
         });
 
         if (allCorrect) {
-       
-          modal.style.display = 'flex';
+
+          openModal(modal);
         } else {
           let rotations = Array.from(pieces).map(p => parseInt(p.dataset.rotation));
-     
+
         }
       });
     });
 
     modal.addEventListener('click', function(e) {
-      if (e.target === modal) modal.style.display = 'none';
+      if (e.target === modal) closeModal(modal);
     });
 
     console.log('Пазл настроен, элементов:', pieces.length);
@@ -141,13 +197,13 @@ window.addEventListener('load', function() {
       });
 
       if (allCorrect) {
-        modal.style.display = 'flex';
+        openModal(modal);
       }
     });
   });
 
   modal.addEventListener('click', function(e) {
-    if (e.target === modal) modal.style.display = 'none';
+    if (e.target === modal) closeModal(modal);
   });
 })();
 
@@ -157,6 +213,7 @@ window.addEventListener('load', function() {
 
 (function() {
   const drawZone = document.querySelector('.kostilris');
+  const dotsContainer = drawZone ? drawZone.parentElement : null;
   let isDrawing = false;
   let painted = 0;
   let modalJustOpenedAt = 0;
@@ -180,21 +237,21 @@ window.addEventListener('load', function() {
     );
   }
 
-  function placeDot(pageX, pageY) {
+  function placeDot(clientX, clientY) {
+    const rect = dotsContainer.getBoundingClientRect();
     const dot = document.createElement('div');
     dot.className = 'dot';
-    dot.style.left = pageX + 'px';
-    dot.style.top = pageY + 'px';
-    document.body.appendChild(dot);
+    dot.style.left = (clientX - rect.left) + 'px';
+    dot.style.top = (clientY - rect.top) + 'px';
+    dotsContainer.appendChild(dot);
 
     painted++;
     if (!popupShown && painted >= POPUP_THRESHOLD) {
       popupShown = true;
       const modal = document.getElementById('popup4');
       if (modal) {
-        modal.style.display = 'flex';
         modal.style.zIndex = '20000';
-        modal.style.pointerEvents = 'auto';
+        openModal(modal);
         modalJustOpenedAt = Date.now();
       }
     }
@@ -207,14 +264,14 @@ window.addEventListener('load', function() {
     e.preventDefault();
     isDrawing = true;
     activePointerId = e.pointerId;
-    lastX = e.pageX;
-    lastY = e.pageY;
+    lastX = e.clientX;
+    lastY = e.clientY;
 
     if (drawZone.setPointerCapture) {
       try { drawZone.setPointerCapture(e.pointerId); } catch (_) {}
     }
 
-    placeDot(e.pageX, e.pageY);
+    placeDot(e.clientX, e.clientY);
   }
 
   function onPointerMove(e) {
@@ -222,14 +279,14 @@ window.addEventListener('load', function() {
     if (activePointerId !== null && e.pointerId !== activePointerId) return;
     if (!isInsideDrawZone(e)) return;
 
-    const dx = (lastX === null) ? 0 : (e.pageX - lastX);
-    const dy = (lastY === null) ? 0 : (e.pageY - lastY);
+    const dx = (lastX === null) ? 0 : (e.clientX - lastX);
+    const dy = (lastY === null) ? 0 : (e.clientY - lastY);
     const dist = Math.hypot(dx, dy);
-    if (dist < 3) return; 
+    if (dist < 3) return;
 
-    lastX = e.pageX;
-    lastY = e.pageY;
-    placeDot(e.pageX, e.pageY);
+    lastX = e.clientX;
+    lastY = e.clientY;
+    placeDot(e.clientX, e.clientY);
   }
 
   function onPointerUp(e) {
@@ -249,7 +306,7 @@ window.addEventListener('load', function() {
     if (!modal) return;
     if (e.target === modal) {
     if (Date.now() - modalJustOpenedAt < 1000) return;
-      modal.style.display = 'none';
+      closeModal(modal);
     }
   });
 })();

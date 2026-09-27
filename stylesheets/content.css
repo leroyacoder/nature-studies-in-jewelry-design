@@ -1263,6 +1263,7 @@ body {
   pointer-events: none;
   object-fit: contain;
   z-index: 1;
+  transition: opacity 0.6s ease;
 }
 
 .zvezdi\.F {
@@ -1275,6 +1276,7 @@ body {
   pointer-events: none;
   object-fit: contain;
    z-index: 1;
+  transition: opacity 0.6s ease;
 }
 
 .bysina\.F {
@@ -1287,6 +1289,7 @@ body {
   pointer-events: none;
   object-fit: contain;
   z-index: 1;
+  transition: opacity 0.6s ease;
 }
 
 .obvodka\.perlamytr\.F:hover ~ .perlamytr\.F,
@@ -1324,6 +1327,14 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+
+.modal-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-content {
@@ -1347,6 +1358,75 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ПОП АП ЗВУК */
+
+.sound-popup-content {
+  position: relative;
+}
+
+.sound-popup-content .sound-btn {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sound-popup-content .sound-btn-on {
+  left: 25.56%;
+  top: 52.03%;
+  width: 13.99%;
+  height: 17.96%;
+}
+
+.sound-popup-content .sound-btn-off {
+  left: 61.02%;
+  top: 50.48%;
+  width: 13.14%;
+  height: 18.73%;
+}
+
+.sound-popup-content .sound-obvodka {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sound-popup-content .sound-bysina {
+  position: relative;
+  width: 75%;
+  height: 75%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sound-popup-content .sound-bysina.hover-visible {
+  opacity: 0.5;
+}
+
+.sound-popup-content .sound-bysina.selected {
+  opacity: 1;
+  animation: soundBysinaAppear 0.4s ease;
+}
+
+@keyframes soundBysinaAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* НАСТРОЙКИ БЛОКА 3 */
@@ -1422,6 +1502,7 @@ body {
   left: 50.7vw;
   position: absolute;
   object-fit: contain;
+  transition: left 0.6s ease;
 }
 
 .zemchug1 {
