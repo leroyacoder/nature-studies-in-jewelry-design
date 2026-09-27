@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static-preview",
+      "runtimeExecutable": "ruby",
+      "runtimeArgs": ["-run", "-e", "httpd", "/Users/leroamakbukova/Desktop/коди это я бро /1 курс/main project/nature-studies-in-jewelry-design", "-p", "4173"],
+      "port": 4173
+    }
+  ]
+}

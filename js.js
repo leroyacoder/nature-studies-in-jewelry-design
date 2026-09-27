@@ -124,13 +124,16 @@ window.addEventListener('load', function() {
   };
 
   const movingElement = document.querySelector('.podviznaya\\.bysina');
+  const shkalaElement = document.querySelector('.shkala');
   const popup = document.getElementById('popup2');
 
-  const stepVW = 10.486;
+  // шаг и стартовая позиция бусины считаются от реальной геометрии шкалы,
+  // чтобы прогресс-бар корректно работал в любой раскладке (десктоп/адаптив)
+  const stepVW = (shkalaElement.getBoundingClientRect().width / window.innerWidth * 100) / 3;
   let correctCount = 0;
   let popupShown = false;
 
-  const initialLeft = 50.7; 
+  const initialLeft = parseFloat(getComputedStyle(movingElement).left) / window.innerWidth * 100;
 
   let activeElement = null;
   let offsetX = 0, offsetY = 0;
@@ -152,7 +155,7 @@ window.addEventListener('load', function() {
     }
   }
 
-  function onMouseDown(e) {
+  function onPointerDown(e) {
     e.preventDefault();
     if (this.classList.contains('placed')) return;
 
@@ -177,11 +180,15 @@ window.addEventListener('load', function() {
     activeElement.style.transition = 'none';
     activeElement.style.pointerEvents = 'none';
 
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
+    if (activeElement.setPointerCapture) {
+      try { activeElement.setPointerCapture(e.pointerId); } catch (_) {}
+    }
+
+    document.addEventListener('pointermove', onPointerMove);
+    document.addEventListener('pointerup', onPointerUp);
   }
 
-  function onMouseMove(e) {
+  function onPointerMove(e) {
     if (!activeElement) return;
 
     const containerRect = container.getBoundingClientRect();
@@ -196,7 +203,7 @@ window.addEventListener('load', function() {
     activeElement.style.top = top + 'px';
   }
 
-  function onMouseUp(e) {
+  function onPointerUp(e) {
     if (!activeElement) return;
 
     const rect = activeElement.getBoundingClientRect();
@@ -248,8 +255,8 @@ window.addEventListener('load', function() {
     activeElement.style.width = '';
     activeElement.style.height = '';
 
-    document.removeEventListener('mousemove', onMouseMove);
-    document.removeEventListener('mouseup', onMouseUp);
+    document.removeEventListener('pointermove', onPointerMove);
+    document.removeEventListener('pointerup', onPointerUp);
 
     activeElement = null;
 
@@ -276,7 +283,8 @@ window.addEventListener('load', function() {
 
   draggableElements.forEach(el => {
     el.style.cursor = 'grab';
-    el.addEventListener('mousedown', onMouseDown);
+    el.style.touchAction = 'none';
+    el.addEventListener('pointerdown', onPointerDown);
     saveOriginalPosition(el);
   });
 

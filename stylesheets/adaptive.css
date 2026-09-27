@@ -1,0 +1,578 @@
+/* ==================================================
+   АДАПТИВ (МОБИЛЬНАЯ ВЕРСИЯ)
+   секции переверстаны в вертикальный стек по мобильному макету figma,
+   все классы/анимации/js-механики те же, меняются только top/left/width/height/font-size
+   ================================================== */
+
+@media (max-width: 768px) {
+
+  .modal-content {
+    width: 85vw;
+  }
+
+  .dot {
+    width: 1vw;
+    height: 1vw;
+  }
+
+  /* ============ БЛОК 1 ============ */
+
+  .block1 {
+    height: 188vw;
+  }
+
+  .podzagolovok11,
+  .podzagolovok12,
+  .podzagolovok13 {
+    filter: blur(0.15vw);
+    text-align: center;
+  }
+
+  .podzagolovok11 {
+    top: 14.98vw;
+    left: 7.73vw;
+    width: 18.12vw;
+    font-size: 3.38vw;
+  }
+
+  .podzagolovok12 {
+    top: 14.98vw;
+    left: 35.51vw;
+    width: 23.91vw;
+    font-size: 3.38vw;
+  }
+
+  .podzagolovok13 {
+    top: 14.98vw;
+    left: 69.08vw;
+    width: 23.91vw;
+    font-size: 3.38vw;
+  }
+
+  .text11 {
+    top: 33.89vw;
+    left: 7vw;
+    width: 42vw;
+    font-size: 3.38vw;
+  }
+
+  .text12 {
+    top: 46.94vw;
+    left: 59.42vw;
+    width: 35.27vw;
+    font-size: 3.38vw;
+  }
+
+  .text13 {
+    top: 176.09vw;
+    left: 10.14vw;
+    width: 34vw;
+    font-size: 3.38vw;
+  }
+
+  /* связка украшений — одно кольцо сверху, брелоки собраны веером снизу */
+
+  .colzo\.bolshoe {
+    width: 26.55vw;
+    height: 26.6vw;
+    top: 68.68vw;
+    left: 40.32vw;
+  }
+
+  .kora {
+    width: 46.01vw;
+    height: 49.05vw;
+    top: 74.66vw;
+    left: 5.07vw;
+  }
+
+  .kora\.kostil1,
+  .kora\.kostil2 {
+    top: 74.66vw;
+    left: 5.07vw;
+    width: 46.01vw;
+    height: 49.05vw;
+  }
+
+  .kora\.raspilenie1,
+  .kora\.raspilenie2,
+  .kora\.raspilenie3,
+  .kora\.raspilenie4,
+  .kora\.raspilenie5 {
+    top: 74.66vw;
+    left: 5.07vw;
+    width: 46.01vw;
+    height: 49.05vw;
+  }
+
+  .svyazka\.bysin {
+    width: 29.05vw;
+    height: 64.11vw;
+    top: 85.24vw;
+    left: 19.7vw;
+  }
+
+  .sb\.kostil1,
+  .sb\.kostil2,
+  .sb\.kostil3 {
+    top: 85.24vw;
+    left: 19.7vw;
+    width: 29.05vw;
+    height: 64.11vw;
+  }
+
+  .sb\.raspilenie1,
+  .sb\.raspilenie2,
+  .sb\.raspilenie3,
+  .sb\.raspilenie4,
+  .sb\.raspilenie5 {
+    top: 85.4vw;
+    left: 18.9vw;
+    width: 43.45vw;
+    height: 69.66vw;
+  }
+
+  .krugli\.kamen {
+    width: 27.17vw;
+    height: 56.82vw;
+    top: 87.35vw;
+    left: 36.76vw;
+  }
+
+  .bolsh\.kostil1,
+  .bolsh\.kostil2 {
+    top: 87.35vw;
+    left: 36.76vw;
+    width: 27.17vw;
+    height: 56.82vw;
+  }
+
+  .bolsh\.raspilenie1,
+  .bolsh\.raspilenie2,
+  .bolsh\.raspilenie3,
+  .bolsh\.raspilenie4,
+  .bolsh\.raspilenie5 {
+    top: 87.4vw;
+    left: 28.9vw;
+    width: 47.11vw;
+    height: 57.1vw;
+  }
+
+  .kristal {
+    width: 26.72vw;
+    height: 58.67vw;
+    top: 86.45vw;
+    left: 58.03vw;
+  }
+
+  .krist\.kostil1 {
+    top: 100vw;
+    left: 63vw;
+    width: 15vw;
+    height: 45.12vw;
+    z-index: 998;
+  }
+
+  .krist\.raspilenie1,
+  .krist\.raspilenie2,
+  .krist\.raspilenie3,
+  .krist\.raspilenie4,
+  .krist\.raspilenie5 {
+    top: 80.5vw;
+    left: 53.6vw;
+    width: 50.98vw;
+    height: 73.97vw;
+  }
+
+  .kvadratnie\.bysini {
+    width: 22.9vw;
+    height: 32.9vw;
+    top: 79.03vw;
+    left: 61.5vw;
+    transform: rotate(-11.55deg);
+  }
+
+  .kb\.kostil1,
+  .kb\.kostil2 {
+    top: 79.03vw;
+    left: 61.5vw;
+    width: 22.9vw;
+    height: 32.9vw;
+    z-index: 1000;
+  }
+
+  .kb\.raspilenie1,
+  .kb\.raspilenie2,
+  .kb\.raspilenie3,
+  .kb\.raspilenie4,
+  .kb\.raspilenie5 {
+    top: 76.25vw;
+    left: 61.5vw;
+    width: 36vw;
+    height: 36.4vw;
+  }
+
+  /* ============ БЛОК 2 ============ */
+
+  .block2 {
+    top: 188vw;
+    height: 158vw;
+  }
+
+  .zagolovok21 {
+    top: 6vw;
+    left: 5vw;
+    width: 90vw;
+    font-size: 7vw;
+  }
+
+  .podzagolovok21 {
+    top: 15vw;
+    left: 5vw;
+    width: 55vw;
+    font-size: 3vw;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  /* на мобильной версии текст-подсказки справа от заголовка убраны по макету */
+  .text21,
+  .text22 {
+    display: none;
+  }
+
+  /* пазл — 3 колонки x 4 ряда */
+
+  .kvadratik11 { top: 24vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik12 { top: 24vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik13 { top: 24vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik14 { top: 47.33vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik15 { top: 47.33vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik16 { top: 47.33vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik17 { top: 70.66vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik18 { top: 70.66vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik19 { top: 70.66vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik110 { top: 94vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik111 { top: 94vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik112 { top: 94vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+
+  .text23 {
+    top: 120vw;
+    left: 4vw;
+    width: 44vw;
+    font-size: 2.8vw;
+    line-height: 1.3;
+  }
+
+  .text24 {
+    top: 120vw;
+    left: 50vw;
+    width: 44vw;
+    font-size: 2.8vw;
+    line-height: 1.3;
+  }
+
+  .obvodka\.perlamytr\.F,
+  .perlamytr\.F {
+    top: 136vw;
+    left: 8vw;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .obvodka\.zvezdi\.F,
+  .zvezdi\.F {
+    top: 136vw;
+    left: 34vw;
+    width: 18vw;
+    height: 18vw;
+  }
+
+  .obvodka\.bysina\.F,
+  .bysina\.F {
+    top: 147vw;
+    left: 58vw;
+    width: 9vw;
+    height: 9vw;
+  }
+
+  /* ============ БЛОК 3 ============ */
+
+  .block3 {
+    top: 346vw;
+    height: 140vw;
+  }
+
+  .zagolovok31 {
+    top: 6vw;
+    left: 5vw;
+    width: 60vw;
+    font-size: 7vw;
+    line-height: 1.15;
+  }
+
+  .podzagolovok31 {
+    top: 22vw;
+    left: 5vw;
+    width: 60vw;
+    font-size: 3vw;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  /* новый лоток по макету — элементы собраны внутри него */
+
+  .tinbox {
+    content: url("../img/tinboxnew.png");
+    top: 28vw;
+    left: 5vw;
+    width: 90vw;
+    height: 58vw;
+  }
+
+  .krestik { top: 34vw; left: 10vw; width: 14vw; height: 14vw; }
+  .kryzok { top: 36vw; left: 20vw; width: 16vw; height: 16vw; }
+  .colzo\.mal { top: 34vw; left: 36vw; width: 9vw; height: 9vw; }
+  .zyb { top: 40vw; left: 13vw; width: 10vw; height: 22vw; }
+  .colzo\.mal2 { top: 42vw; left: 30vw; width: 11vw; height: 11vw; }
+  .perlamytr { top: 34vw; left: 44vw; width: 12vw; height: 14vw; }
+  .racyshka { top: 38vw; left: 40vw; width: 11vw; height: 13vw; }
+  .brysochek { top: 50vw; left: 22vw; width: 9vw; height: 20vw; }
+  .bysina1 { top: 56vw; left: 14vw; width: 6vw; height: 8vw; }
+  .bysina2 { top: 62vw; left: 26vw; width: 7vw; height: 7vw; }
+  .bysina3 { top: 58vw; left: 34vw; width: 8vw; height: 8vw; }
+  .zemchug1 { top: 62vw; left: 44vw; width: 9vw; height: 9vw; }
+  .zemchug2 { top: 48vw; left: 52vw; width: 9vw; height: 9vw; }
+  .zvezdochka { top: 66vw; left: 46vw; width: 11vw; height: 11vw; }
+
+  .tablo\.dlay\.melochevki {
+    top: 92vw;
+    left: 10vw;
+    width: 80vw;
+    height: 26vw;
+  }
+
+  .obvodka\.krestik {
+    top: 96vw;
+    left: 18vw;
+    width: 16vw;
+    height: 22vw;
+  }
+
+  .obvodka\.zyb {
+    top: 96vw;
+    left: 44vw;
+    width: 14vw;
+    height: 20vw;
+  }
+
+  .obvodka\.rakyshka {
+    top: 94vw;
+    left: 66vw;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .podviznaya\.bysina {
+    top: 122vw;
+    left: 8vw;
+    width: 8vw;
+    height: 8.6vw;
+  }
+
+  .shkala {
+    top: 124vw;
+    left: 18vw;
+    width: 70vw;
+    height: 4vw;
+  }
+
+  /* ============ БЛОК 4 ============ */
+
+  .block4 {
+    top: 486vw;
+    height: 140vw;
+  }
+
+  .zagolovok41 {
+    top: 5vw;
+    left: 5vw;
+    width: 90vw;
+    font-size: 7vw;
+  }
+
+  .podzagolovok41 {
+    top: 13vw;
+    left: 5vw;
+    width: 60vw;
+    font-size: 3vw;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .kvadratik21 { top: 24vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik22 { top: 24vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik23 { top: 24vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik24 { top: 47.33vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik25 { top: 47.33vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik26 { top: 47.33vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik27 { top: 70.66vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik28 { top: 70.66vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik29 { top: 70.66vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik210 { top: 94vw; left: 15vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik211 { top: 94vw; left: 38.33vw; width: 23.33vw; height: 23.33vw; }
+  .kvadratik212 { top: 94vw; left: 61.66vw; width: 23.33vw; height: 23.33vw; }
+
+  .text41 {
+    top: 122vw;
+    left: 5vw;
+    width: 60vw;
+    font-size: 3.2vw;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  /* на мобильной версии дополнительные подсказки убраны по макету */
+  .text42,
+  .text43,
+  .text44 {
+    display: none;
+  }
+
+  /* ============ БЛОК 5 ============ */
+
+  .block5 {
+    top: 626vw;
+  }
+
+  .zagolovok51 {
+    top: 5vw;
+    left: 10vw;
+    width: 80vw;
+    font-size: 7vw;
+    line-height: 1.15;
+  }
+
+  .podzagolovok51 {
+    top: 22vw;
+    left: 15vw;
+    width: 70vw;
+    font-size: 3vw;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .blokzametok {
+    top: 34vw;
+    left: 20vw;
+    width: 60vw;
+    height: 76vw;
+  }
+
+  .kostilris {
+    top: 34vw;
+    left: 20vw;
+    width: 60vw;
+    height: 76vw;
+  }
+
+  /* мерцающая анимация прорисовки ракушек убрана по мобильному макету */
+  .tytor11, .tytor12, .tytor13, .tytor14,
+  .tytor15, .tytor16, .tytor17, .tytor18,
+  .tytor21, .tytor22, .tytor23, .tytor24,
+  .tytor25, .tytor26, .tytor27, .tytor28 {
+    display: none;
+  }
+
+  /* подсказки блока 5 убраны по мобильному макету */
+  .text51,
+  .text52,
+  .text53,
+  .text54 {
+    display: none;
+  }
+
+  /* ============ ПОДВАЛ ============ */
+
+  .podval {
+    top: 746vw;
+    margin-bottom: 20vw;
+  }
+
+  .kolzopodval {
+    top: 20vw;
+    left: 15vw;
+    width: 70vw;
+    height: 82vw;
+  }
+
+  /* бегущая строка идёт полосой поверх кольца */
+  .marquee {
+    top: 48vw;
+  }
+
+  .marquee .begstrok {
+    width: 508vw;
+    height: 22vw;
+  }
+
+  .textp1 {
+    top: 14vw;
+    left: 5vw;
+    width: auto;
+    font-size: 3.2vw;
+  }
+
+  .textp2 {
+    top: 6vw;
+    left: 60vw;
+    width: auto;
+    font-size: 3.2vw;
+  }
+
+  .textp3 {
+    top: 60vw;
+    left: 70vw;
+    width: auto;
+    font-size: 3.2vw;
+  }
+
+  .textp6 {
+    top: 112vw;
+    left: 8vw;
+    width: 84vw;
+    font-size: 3vw;
+    line-height: 1.4;
+  }
+
+  .podzagolovokp1 {
+    top: 124vw;
+    left: 8vw;
+    width: auto;
+    font-size: 3.2vw;
+  }
+
+  .textp4 {
+    top: 130vw;
+    left: 8vw;
+    width: 60vw;
+    font-size: 3.2vw;
+    line-height: 1.3;
+  }
+
+  .podzagolovokp2 {
+    top: 140vw;
+    left: 8vw;
+    width: auto;
+    font-size: 3.2vw;
+  }
+
+  .textp5 {
+    top: 146vw;
+    left: 8vw;
+    width: 60vw;
+    font-size: 3.2vw;
+    line-height: 1.3;
+  }
+
+}
