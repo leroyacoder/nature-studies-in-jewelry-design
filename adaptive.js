@@ -57,6 +57,8 @@
     e.preventDefault();
     if (this.classList.contains('placed')) return;
 
+    playSfx(sndClick);
+
     activeElement = this;
     const rect = activeElement.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
@@ -136,6 +138,7 @@
           if (!activeElement.classList.contains('placed')) {
             activeElement.classList.add('placed');
             correctCount++;
+            playSfx(sndProgress);
 
             const newProgress = initialLeft + stepVW * correctCount;
             movingElement.style.left = newProgress + 'vw';
@@ -159,8 +162,23 @@
     activeElement = null;
 
     if (correctCount === 3 && !popupShown) {
-      openModal(popup);
       popupShown = true;
+
+      // ждём, пока бусина доедет до конца шкалы (transition left 0.8s),
+      // и только потом показываем попап, чтобы анимации не накладывались
+      let popupOpened = false;
+      const openOnce = () => {
+        if (popupOpened) return;
+        popupOpened = true;
+        movingElement.removeEventListener('transitionend', onBeadTransitionEnd);
+        openModal(popup);
+      };
+      const onBeadTransitionEnd = (ev) => {
+        if (ev.propertyName !== 'left') return;
+        openOnce();
+      };
+      movingElement.addEventListener('transitionend', onBeadTransitionEnd);
+      setTimeout(openOnce, 850);
     }
   }
 
@@ -182,6 +200,11 @@
   draggableElements.forEach(el => {
     el.style.cursor = 'grab';
     el.style.touchAction = 'none';
+    // native HTML5 image drag конфликтует с pointer-based драгом:
+    // иногда браузер перехватывает жест как обычный drag картинки,
+    // из-за чего pointerup не долетает и фигурка "не встаёт" в паз
+    el.setAttribute('draggable', 'false');
+    el.addEventListener('dragstart', (e) => e.preventDefault());
     el.addEventListener('pointerdown', onPointerDown);
     saveOriginalPosition(el);
   });

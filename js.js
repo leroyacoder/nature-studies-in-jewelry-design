@@ -1,7 +1,24 @@
+// ЗВУКИ САЙТА
+
+const sndPopup = new Audio('./mp3/steklo.korotkoe.mp3');
+const sndCorrect = new Audio('./mp3/steklo.dlinnoe.mp3');
+sndCorrect.volume = 0.5;
+const sndClick = new Audio('./mp3/dzin.mp3');
+sndClick.volume = 0.25;
+const sndProgress = new Audio('./mp3/prokryt.mp3');
+[sndPopup, sndCorrect, sndClick, sndProgress].forEach(a => a.preload = 'auto');
+
+function playSfx(audio) {
+  if (!window.soundEnabled) return;
+  audio.currentTime = 0;
+  audio.play().catch(() => {});
+}
+
 // ОБЩАЯ ПЛАВНАЯ АНИМАЦИЯ ПОП АПОВ
 
 function openModal(modal) {
   if (!modal) return;
+  playSfx(sndPopup);
   modal.style.display = 'flex';
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
@@ -12,10 +29,11 @@ function openModal(modal) {
 
 function closeModal(modal) {
   if (!modal) return;
+  playSfx(sndPopup);
   modal.classList.remove('is-visible');
   setTimeout(() => {
     modal.style.display = 'none';
-  }, 900);
+  }, 1200);
 }
 
 window.soundEnabled = false;
@@ -90,6 +108,7 @@ window.addEventListener('load', function() {
 (function() {
   const sound = new Audio('./mp3/zvyk1.mp3');
   sound.preload = 'auto';
+  sound.volume = 0.5;
 
   const textBlocks = document.querySelectorAll(
     '.text11, .text12, .text13, .text21, .text22, .text23, .text24, .text41, .text42, .text43, .text44, .text51, .text52, .text53, .text54, .textp1, .textp2, .textp3'
@@ -136,9 +155,14 @@ window.addEventListener('load', function() {
     pieces.forEach(piece => {
       piece.addEventListener('click', function(e) {
         e.stopPropagation();
+        playSfx(sndClick);
         let current = (parseInt(this.dataset.rotation) + 90) % 360;
         this.dataset.rotation = current;
         this.style.transform = `rotate(${current}deg)`;
+
+        if (current === 0) {
+          playSfx(sndCorrect);
+        }
 
         let allCorrect = true;
         pieces.forEach(p => {
@@ -187,9 +211,14 @@ window.addEventListener('load', function() {
   pieces.forEach(piece => {
     piece.addEventListener('click', function(e) {
       e.stopPropagation();
+      playSfx(sndClick);
       let current = (parseInt(this.dataset.rotation) + 90) % 360;
       this.dataset.rotation = current;
       this.style.transform = `rotate(${current}deg)`;
+
+      if (current === 0) {
+        playSfx(sndCorrect);
+      }
 
       let allCorrect = true;
       pieces.forEach(p => {
@@ -327,6 +356,7 @@ window.addEventListener('load', function() {
     const marquee = e.target.closest?.('.marquee');
     if (!marquee) return;
     setMarqueeRate(marquee, SLOW_RATE);
+    playSfx(sndClick);
   }, true);
 
   document.addEventListener('pointerleave', (e) => {
@@ -334,4 +364,26 @@ window.addEventListener('load', function() {
     if (!marquee) return;
     setMarqueeRate(marquee, NORMAL_RATE);
   }, true);
+})();
+
+// ЗВУК ПРИ НАВЕДЕНИИ НА ДЕКОР (2 ЭКРАН)
+
+(function() {
+  const decor = document.querySelectorAll(
+    '.obvodka\\.perlamytr\\.F, .obvodka\\.zvezdi\\.F, .obvodka\\.bysina\\.F'
+  );
+  decor.forEach(el => {
+    el.addEventListener('mouseenter', () => playSfx(sndClick));
+  });
+})();
+
+// ЗВУК ПРИ НАВЕДЕНИИ НА ОБВЕС (1 ЭКРАН)
+
+(function() {
+  const obves = document.querySelectorAll(
+    '.kb\\.kostil1, .kb\\.kostil2, .krist\\.kostil1, .bolsh\\.kostil1, .bolsh\\.kostil2, .sb\\.kostil1, .sb\\.kostil2, .sb\\.kostil3, .kora\\.kostil1, .kora\\.kostil2'
+  );
+  obves.forEach(el => {
+    el.addEventListener('mouseenter', () => playSfx(sndProgress));
+  });
 })();

@@ -512,7 +512,7 @@
   }
 
   .blokzametok {
-    top: 17.5vw;
+    top: 27.5vw;
     left: 7vw;
     width: 86vw;
     height: 109vw;
@@ -521,7 +521,7 @@
   /* touch-action: none — без этого тач-скролл на телефоне перехватывает
      жест раньше, чем сработает рисование поинтер-событиями */
   .kostilris {
-    top: 17.5vw;
+    top: 27.5vw;
     left: 7vw;
     width: 86vw;
     height: 109vw;
@@ -547,84 +547,95 @@
   /* ============ ПОДВАЛ ============ */
 
   .podval {
-    top: 933.66vw;
+    top: 958.66vw;
+    height: 125vw;
     margin-bottom: 20vw;
   }
 
   .kolzopodval {
-    top: 20vw;
-    left: 15vw;
-    width: 70vw;
-    height: 82vw;
+    top: 25vw;
+    left: 17.04vw;
+    width: 59.61vw;
+    height: 70.11vw;
   }
 
   /* бегущая строка идёт полосой поверх кольца */
   .marquee {
-    top: 48vw;
+    top: 53.87vw;
   }
 
+  /* фотки в спрайте квадратные, а по макету должны быть вертикальными
+     прямоугольниками (86.86х117) — object-fit: cover сохраняет квадрат,
+     поэтому тут нужен fill, чтобы растянуть каждую фотку в нужный формат */
   .marquee .begstrok {
-    width: 508vw;
-    height: 22vw;
-  }
-
-  .textp1 {
-    top: 14vw;
-    left: 5vw;
-    width: auto;
-    font-size: 3.2vw;
+    width: 550vw;
+    height: 28.26vw;
+    object-fit: fill;
   }
 
   .textp2 {
-    top: 6vw;
-    left: 60vw;
-    width: auto;
-    font-size: 3.2vw;
+    top: 2.69vw;
+    left: 49.52vw;
+    width: 16.67vw;
+    font-size: 3.38vw;
+  }
+
+  .textp1 {
+    top: 15.98vw;
+    left: 6.52vw;
+    width: 26.09vw;
+    font-size: 3.38vw;
   }
 
   .textp3 {
-    top: 60vw;
-    left: 70vw;
-    width: auto;
-    font-size: 3.2vw;
+    top: 42.07vw;
+    left: 76.09vw;
+    width: 20.29vw;
+    font-size: 3.38vw;
   }
 
   .textp6 {
-    top: 112vw;
-    left: 8vw;
-    width: 84vw;
-    font-size: 3vw;
-    line-height: 1.4;
+    top: 107.04vw;
+    left: 10.75vw;
+    width: 78.5vw;
+    font-size: 3.38vw;
+    line-height: 1.21;
   }
 
   .podzagolovokp1 {
-    top: 124vw;
-    left: 8vw;
-    width: auto;
-    font-size: 3.2vw;
+    top: 126.12vw;
+    left: 10.87vw;
+    width: 42.03vw;
+    font-size: 3.38vw;
+    text-transform: uppercase;
+    filter: blur(0.15vw);
   }
 
   .textp4 {
-    top: 130vw;
-    left: 8vw;
-    width: 60vw;
-    font-size: 3.2vw;
-    line-height: 1.3;
+    top: 123.95vw;
+    left: 57.49vw;
+    width: 28.74vw;
+    font-size: 3.38vw;
+    line-height: 1.21;
+    white-space: normal;
   }
 
   .podzagolovokp2 {
-    top: 140vw;
-    left: 8vw;
-    width: auto;
-    font-size: 3.2vw;
+    top: 145.69vw;
+    left: 10.87vw;
+    width: 45.65vw;
+    font-size: 3.38vw;
+    text-transform: uppercase;
+    filter: blur(0.15vw);
   }
 
   .textp5 {
-    top: 146vw;
-    left: 8vw;
-    width: 60vw;
-    font-size: 3.2vw;
-    line-height: 1.3;
+    top: 143.51vw;
+    left: 57.49vw;
+    width: 25.36vw;
+    font-size: 3.38vw;
+    line-height: 1.21;
+    white-space: normal;
   }
 
 }

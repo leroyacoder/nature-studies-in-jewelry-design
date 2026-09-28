@@ -1263,7 +1263,7 @@ body {
   pointer-events: none;
   object-fit: contain;
   z-index: 1;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .zvezdi\.F {
@@ -1276,7 +1276,7 @@ body {
   pointer-events: none;
   object-fit: contain;
    z-index: 1;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .bysina\.F {
@@ -1289,7 +1289,7 @@ body {
   pointer-events: none;
   object-fit: contain;
   z-index: 1;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .obvodka\.perlamytr\.F:hover ~ .perlamytr\.F,
@@ -1329,12 +1329,21 @@ body {
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.9s ease;
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.modal-overlay .modal-content {
+  transform: scale(0.96);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .modal-overlay.is-visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal-overlay.is-visible .modal-content {
+  transform: scale(1);
 }
 
 .modal-content {
@@ -1502,7 +1511,7 @@ body {
   left: 50.7vw;
   position: absolute;
   object-fit: contain;
-  transition: left 0.6s ease;
+  transition: left 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .zemchug1 {
